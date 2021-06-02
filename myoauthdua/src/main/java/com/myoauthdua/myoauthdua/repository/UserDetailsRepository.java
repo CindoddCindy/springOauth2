@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional
-public interface UserDetailsRepository  extends JpaRepository<UserInfo, String> {
+public interface UserDetailsRepository  extends CrudRepository<UserInfo, String> {
     public UserInfo findByUserNameAndEnabled(String userName, short enabled);
 
     public List<UserInfo> findAllByEnabled(short enabled);
